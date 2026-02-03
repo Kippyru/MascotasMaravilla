@@ -1,29 +1,45 @@
 package com.kt.MascotasMaravilla.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "persona")
 public class Persona {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_persona;
+    @Column(name = "idPersona", nullable = false)
+    private Integer id;
+
+    @Column(name = "dni")
     private String dni;
+
+    @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "apellido")
     private String apellido;
+
+    @Column(name = "telefono")
     private String telefono;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "creado")
     private LocalDate creado;
+
+    @Column(name = "editado")
     private LocalDate editado;
+
+
 }

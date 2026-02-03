@@ -9,13 +9,11 @@ import java.time.Instant;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PersonaDTO {
-    private Integer id_persona;
-    private String dni;
-    private String nombre;
-    private String apellido;
-    private String telefono;
-    private String email;
+public class StaffDTO {
+    private Integer id;
+    private Integer idPersona;
+    private String rol;
+    private String matricula;
     private Instant creado;
     private Instant editado;
 }

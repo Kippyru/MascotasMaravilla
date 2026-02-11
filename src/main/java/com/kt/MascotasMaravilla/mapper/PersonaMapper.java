@@ -17,4 +17,6 @@ public interface PersonaMapper {
     List<PersonaDTO> toList(List<Persona> personaList);
 
     void updatePersona(PersonaDTO personaDTO, @MappingTarget Persona persona);
+
 }
+

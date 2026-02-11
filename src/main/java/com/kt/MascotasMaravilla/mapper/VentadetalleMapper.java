@@ -25,8 +25,8 @@ public abstract class VentadetalleMapper {
     @Mapping(target = "idArticulo", source = "idArticulo", qualifiedByName = "mapIdToArticulo")
     public abstract Ventadetalle toEntity(VentadetalleDTO ventadetalleDTO);
 
-    @Mapping(target = "idVenta", source = "idVenta")
-    @Mapping(target = "idArticulo", source = "idArticulo")
+    @Mapping(target = "idVenta", source = "idVenta.id")
+    @Mapping(target = "idArticulo", source = "idArticulo.id")
     public abstract VentadetalleDTO toDto(Ventadetalle ventadetalle);
 
     @Named("mapIdToVenta")

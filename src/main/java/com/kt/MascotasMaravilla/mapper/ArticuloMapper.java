@@ -20,7 +20,7 @@ public abstract class ArticuloMapper {
     @Mapping(target = "idCategoria", source = "idCategoria", qualifiedByName = "mapidToCategoria")
     public abstract Articulo toEntity(ArticuloDTO articuloDTO);
 
-    @Mapping(target = "idCategoria", source = "idCategoria")
+    @Mapping(target = "idCategoria", source = "idCategoria.id")
     public abstract ArticuloDTO toDto(Articulo articulo);
 
     @Named("mapidToCategoria")
